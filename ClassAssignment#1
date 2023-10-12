@@ -1,0 +1,47 @@
+USE EmployeeDatabase
+SELECT *
+FROM WorksOn
+ORDER BY (projNo) DESC, hoursWorked DESC;
+
+USE EmployeeDatabase
+SELECT *
+FROM Employee
+WHERE DOB < '1970-01-01';
+
+USE EmployeeDatabase
+SELECT *
+FROM Department
+SELECT *
+FROM Project
+WHERE deptNo = 12
+ORDER BY projName DESC;
+
+USE EmployeeDatabase
+SELECT DISTINCT projNo
+FROM WorksOn
+WHERE hoursWorked IN (10,14, 18, 22, 27.5, 33, 36);
+
+USE EmployeeDatabase
+SELECT DISTINCT firstName
+FROM Employee
+WHERE sex = 'Female' AND position = 'Staff';
+
+USE EmployeeDatabase
+SELECT *
+FROM Project
+WHERE projName = 'Technological Disruption' OR projName = 'Conference and Publications';
+SELECT DISTINCT empNo, firstName, lastName
+From Employee
+WHERE deptNo = 12 or deptNo = 24;
+
+USE EmployeeDatabase
+SELECT empNo
+FROM Dependent
+WHERE Bdate > '2000' AND Dependent_name = 'Alexandra'
+ORDER BY empNo DESC; 
+
+USE EmployeeDatabase
+SELECT firstName, lastName, Address
+FROM Employee
+WHERE [position] = 'Manager' AND sex = 'Female'
+ORDER BY firstName, lastName DESC;
